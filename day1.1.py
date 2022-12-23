@@ -1,3 +1,4 @@
 with open("day1.txt", "r") as file:
-    day1 = [line.strip().split(" ") for line in file]
-    print(day1)
+    day1 = [line.strip() for line in file]
+    new = []
+
