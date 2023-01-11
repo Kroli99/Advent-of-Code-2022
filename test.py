@@ -1,5 +1,5 @@
 day3 = ["vJrwpWtwJgWrhcsFMMfFFhFp", "jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL", "PmmdzqPrVvPwwTWBwg", "wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn", "ttgJtRGJQctTZtZT", "CrZsJsPPZsGzwwsLwLmpwMDw"]
-priorities = [j for j in range(0, 52)]
+priorities = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z", "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
 
 first_half = None
 second_half = None
@@ -15,7 +15,7 @@ for text in day3:
                 continue
             else:
                 letters.append(i)
-
+                
 for letter in letters:
     number = 0
     for prioritie in priorities:
@@ -24,4 +24,4 @@ for letter in letters:
         else:
             number = number + 1
 
-print(priorities)
+print(score, letters)
