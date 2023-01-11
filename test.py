@@ -1,10 +1,10 @@
 day3 = ["vJrwpWtwJgWrhcsFMMfFFhFp", "jqHRNqRjqzjGDLGLrsFMfFZSrLrFZsSL", "PmmdzqPrVvPwwTWBwg", "wMqvLMZHhHMvwLHjbvcjnnSBnvTQFn", "ttgJtRGJQctTZtZT", "CrZsJsPPZsGzwwsLwLmpwMDw"]
-priorities = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ"
+priorities = [j for j in range(0, 52)]
 
 first_half = None
 second_half = None
 letters = []
-number = 0
+score = 0
 
 for text in day3:
     first_half = text[:int(len(text)/2)]
@@ -15,10 +15,13 @@ for text in day3:
                 continue
             else:
                 letters.append(i)
-        for j in range(len(priorities)):
-            if priorities[j] == letters:
-                number += len(priorities[:j]) + 1
-                print(number, letters)
-                break
 
-print(number)
+for letter in letters:
+    number = 0
+    for prioritie in priorities:
+        if prioritie == letter:
+            score = score + number + 1
+        else:
+            number = number + 1
+
+print(priorities)
